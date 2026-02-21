@@ -1,0 +1,111 @@
+
+
+
+.project-card.southernpos-card:hover {
+    border-color: #10b981;
+    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.15);
+}
+
+[data-theme="dark"] .project-card.southernpos-card:hover {
+    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.3);
+}
+
+.project-card.southernpos-card:hover .project-link {
+    color: #10b981;
+}
+
+.project-card.southernpos-card .project-image {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.project-card.southernpos-card .project-status.status-progress {
+    background-color: rgba(16, 185, 129, 0.9);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .project-card.southernpos-card .project-status.status-progress {
+    background-color: rgba(16, 185, 129, 0.9);
+    color: #ffffff;
+}
+
+
+.project-card.plugsite-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.15);
+}
+
+[data-theme="dark"] .project-card.plugsite-card:hover {
+    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.3);
+}
+
+.project-card.plugsite-card:hover .project-link {
+    color: #d4af37;
+}
+
+.project-card.plugsite-card .project-image {
+    background: linear-gradient(135deg, #d4af37, #c49a2c);
+}
+
+.project-card.plugsite-card .project-status.status-progress {
+    background-color: rgba(212, 175, 55, 0.9);
+    color: #0a0a0a;
+}
+
+[data-theme="dark"] .project-card.plugsite-card .project-status.status-progress {
+    background-color: rgba(212, 175, 55, 0.9);
+    color: #0a0a0a;
+}
+
+
+.project-card.eiwa-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
+}
+
+[data-theme="dark"] .project-card.eiwa-card:hover {
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+}
+
+.project-card.eiwa-card:hover .project-link {
+    color: #2563eb;
+}
+
+.project-card.eiwa-card .project-image {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.project-card.eiwa-card .project-status.status-completed {
+    background-color: rgba(209, 250, 229, 0.9);
+    color: #065f46;
+}
+
+[data-theme="dark"] .project-card.eiwa-card .project-status.status-completed {
+    background-color: rgba(6, 78, 59, 0.9);
+    color: #6ee7b7;
+}
+
+
+.project-card.southernpos-card:hover .tech-tag {
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.project-card.plugsite-card:hover .tech-tag {
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.project-card.eiwa-card:hover .tech-tag {
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card .project-link svg {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-link svg {
+    transform: translateX(4px);
+}

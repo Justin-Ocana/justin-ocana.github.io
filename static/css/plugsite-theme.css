@@ -1,0 +1,424 @@
+body.plugsite-page {
+    --accent-primary: #d4af37;
+    --accent-secondary: #c49a2c;
+    --accent-hover: #e5c158;
+    --accent: #d4af37;
+
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #252525;
+
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-tertiary: #a0a0a0;
+
+    --border: rgba(255, 255, 255, 0.15);
+
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+}
+
+
+html[data-theme="light"] body.plugsite-page {
+    --accent-primary: #c49a2c;
+    --accent-secondary: #d4af37;
+    --accent-hover: #b8892a;
+    --accent: #c49a2c;
+
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f5f5f5;
+
+    --text-primary: #0a0a0a;
+    --text-secondary: #525252;
+    --text-tertiary: #737373;
+
+    --border: #e5e5e5;
+
+    --success: #059669;
+    --warning: #d97706;
+    --error: #dc2626;
+    --info: #2563eb;
+}
+
+
+body.plugsite-page .hero-gradient {
+    background: linear-gradient(135deg,
+            #d4af37 0%,
+            #e5c158 50%,
+            #c49a2c 100%);
+    opacity: 0.15;
+}
+
+
+html[data-theme="light"] body.plugsite-page .hero-gradient {
+    background: linear-gradient(135deg,
+            #d4af37 0%,
+            #e5c158 50%,
+            #c49a2c 100%);
+    opacity: 0.08;
+}
+
+
+body.plugsite-page .project-title {
+    background: linear-gradient(135deg, #ffffff, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+html[data-theme="light"] body.plugsite-page .project-title {
+    background: linear-gradient(135deg, #0a0a0a, #c49a2c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+body.plugsite-page .feature-icon {
+    background: linear-gradient(135deg, #d4af37, #e5c158);
+}
+
+html[data-theme="light"] body.plugsite-page .feature-icon {
+    background: linear-gradient(135deg, #c49a2c, #d4af37);
+}
+
+
+body.plugsite-page .browser-content {
+    background: linear-gradient(135deg, #d4af37, #c49a2c);
+}
+
+
+body.plugsite-page .overlay-cta svg {
+    color: #d4af37;
+}
+
+
+body.plugsite-page .btn-primary {
+    background-color: #d4af37;
+    color: #0a0a0a;
+    font-weight: 600;
+}
+
+body.plugsite-page .btn-primary:hover {
+    background-color: #e5c158;
+}
+
+
+html[data-theme="light"] body.plugsite-page .btn-primary {
+    background-color: #c49a2c;
+    color: #ffffff;
+}
+
+html[data-theme="light"] body.plugsite-page .btn-primary:hover {
+    background-color: #b8892a;
+}
+
+
+body.plugsite-page .project-label,
+body.plugsite-page .nav-link.active,
+body.plugsite-page a:hover {
+    color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .project-label,
+html[data-theme="light"] body.plugsite-page .nav-link.active,
+html[data-theme="light"] body.plugsite-page a:hover {
+    color: #c49a2c;
+}
+
+
+body.plugsite-page .badge.badge-primary {
+    background-color: rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+    color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .badge.badge-primary {
+    background-color: rgba(196, 154, 44, 0.1);
+    border-color: #c49a2c;
+    color: #c49a2c;
+}
+
+
+body.plugsite-page .meta-icon.status-dev {
+    color: #f59e0b;
+}
+
+html[data-theme="light"] body.plugsite-page .meta-icon.status-dev {
+    color: #d97706;
+}
+
+
+body.plugsite-page .tech-badge:hover {
+    border-color: #d4af37;
+    color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .tech-badge:hover {
+    border-color: #c49a2c;
+    color: #c49a2c;
+}
+
+
+body.plugsite-page .feature-highlight:hover {
+    border-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .feature-highlight:hover {
+    border-color: #c49a2c;
+}
+
+
+body.plugsite-page .architecture-item:hover {
+    border-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .architecture-item:hover {
+    border-color: #c49a2c;
+}
+
+
+body.plugsite-page .decision-item {
+    border-left-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .decision-item {
+    border-left-color: #c49a2c;
+}
+
+
+body.plugsite-page .roadmap-status.implemented {
+    color: #10b981;
+    border-bottom-color: #10b981;
+}
+
+html[data-theme="light"] body.plugsite-page .roadmap-status.implemented {
+    color: #059669;
+    border-bottom-color: #059669;
+}
+
+body.plugsite-page .roadmap-status.in-progress {
+    color: #f59e0b;
+    border-bottom-color: #f59e0b;
+}
+
+html[data-theme="light"] body.plugsite-page .roadmap-status.in-progress {
+    color: #d97706;
+    border-bottom-color: #d97706;
+}
+
+body.plugsite-page .roadmap-status.planned {
+    color: #d4af37;
+    border-bottom-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .roadmap-status.planned {
+    color: #c49a2c;
+    border-bottom-color: #c49a2c;
+}
+
+
+body.plugsite-page .limitation-item h4::before {
+    background-color: #f59e0b;
+}
+
+html[data-theme="light"] body.plugsite-page .limitation-item h4::before {
+    background-color: #d97706;
+}
+
+
+body.plugsite-page .challenge-card {
+    border-left-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .challenge-card {
+    border-left-color: #c49a2c;
+}
+
+
+body.plugsite-page .back-link:hover {
+    color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .back-link:hover {
+    color: #c49a2c;
+}
+
+
+body.plugsite-page .showcase-browser:hover .showcase-overlay {
+    background: rgba(10, 10, 10, 0.85);
+}
+
+html[data-theme="light"] body.plugsite-page .showcase-browser:hover .showcase-overlay {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+body.plugsite-page .problem-box {
+    background-color: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+body.plugsite-page .solution-box {
+    background-color: rgba(212, 175, 55, 0.08);
+    border-color: rgba(212, 175, 55, 0.25);
+}
+
+
+html[data-theme="light"] body.plugsite-page .problem-box {
+    background-color: rgba(239, 68, 68, 0.05);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+html[data-theme="light"] body.plugsite-page .solution-box {
+    background-color: rgba(196, 154, 44, 0.05);
+    border-color: rgba(196, 154, 44, 0.2);
+}
+
+body.plugsite-page .solution-box h3 svg {
+    color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .solution-box h3 svg {
+    color: #c49a2c;
+}
+
+
+body.plugsite-page .arch-layer:hover {
+    border-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .arch-layer:hover {
+    border-color: #c49a2c;
+}
+
+body.plugsite-page .arch-arrow {
+    color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .arch-arrow {
+    color: #c49a2c;
+}
+
+
+body.plugsite-page .feature-item:hover {
+    border-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .feature-item:hover {
+    border-color: #c49a2c;
+}
+
+
+body.plugsite-page .security-item h4::before {
+    background-color: #d4af37;
+}
+
+html[data-theme="light"] body.plugsite-page .security-item h4::before {
+    background-color: #c49a2c;
+}
+
+
+body.plugsite-page .limitation-note {
+    background-color: rgba(212, 175, 55, 0.08);
+    border-color: rgba(212, 175, 55, 0.25);
+}
+
+html[data-theme="light"] body.plugsite-page .limitation-note {
+    background-color: rgba(196, 154, 44, 0.05);
+    border-color: rgba(196, 154, 44, 0.2);
+}
+
+
+body.plugsite-page .project-cta .btn-primary {
+    background-color: #d4af37;
+    color: #0a0a0a;
+}
+
+body.plugsite-page .project-cta .btn-primary:hover {
+    background-color: #e5c158;
+}
+
+html[data-theme="light"] body.plugsite-page .project-cta .btn-primary {
+    background-color: #c49a2c;
+    color: #ffffff;
+}
+
+html[data-theme="light"] body.plugsite-page .project-cta .btn-primary:hover {
+    background-color: #b8892a;
+}
+
+
+body.plugsite-page .project-link {
+    color: #d4af37;
+}
+
+body.plugsite-page .project-link:hover {
+    color: #e5c158;
+}
+
+html[data-theme="light"] body.plugsite-page .project-link {
+    color: #c49a2c;
+}
+
+html[data-theme="light"] body.plugsite-page .project-link:hover {
+    color: #b8892a;
+}
+
+
+body.plugsite-page::-webkit-scrollbar-thumb {
+    background: #d4af37;
+}
+
+body.plugsite-page::-webkit-scrollbar-thumb:hover {
+    background: #e5c158;
+}
+
+
+html[data-theme="light"] body.plugsite-page::-webkit-scrollbar-thumb {
+    background: #c49a2c;
+}
+
+html[data-theme="light"] body.plugsite-page::-webkit-scrollbar-thumb:hover {
+    background: #b8892a;
+}
+
+
+body.plugsite-page ::selection {
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #ffffff;
+}
+
+body.plugsite-page ::-moz-selection {
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #ffffff;
+}
+
+
+html[data-theme="light"] body.plugsite-page ::selection {
+    background-color: rgba(196, 154, 44, 0.25);
+    color: #0a0a0a;
+}
+
+html[data-theme="light"] body.plugsite-page ::-moz-selection {
+    background-color: rgba(196, 154, 44, 0.25);
+    color: #0a0a0a;
+}
+
+
+html[data-theme="light"] body.plugsite-page .navbar {
+    background-color: rgba(250, 250, 250, 0.8);
+}
+
+
+html[data-theme="light"] body.plugsite-page .browser-header {
+    background-color: #f5f5f5;
+}
+
+html[data-theme="light"] body.plugsite-page .browser-url {
+    background-color: #ffffff;
+}

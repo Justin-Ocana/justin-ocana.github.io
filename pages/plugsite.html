@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plugsite - Multi-tenant SaaS platform for Minecraft server stores">
+    <title>Plugsite - Justin Ocaña</title>
+    <link rel="icon" type="image/svg+xml" href="../static/images/favicon.svg">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/project-page.css">
+    <link rel="stylesheet" href="../static/css/plugsite-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="plugsite-page"></body>
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="../index.html" class="logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2.5" />
+                <path d="M12 16L16 20L20 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M16 12V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+        </a>
+        <a href="../index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span data-i18n="nav.back">Back to Portfolio</span>
+        </a>
+        <div class="nav-actions">
+            <div class="language-selector">
+                <button class="language-toggle" id="languageToggle" aria-label="Change language">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path
+                            d="M2 10H18M10 2C11.5 4 12 7 12 10C12 13 11.5 16 10 18M10 2C8.5 4 8 7 8 10C8 13 8.5 16 10 18"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span class="language-text" id="currentLang">EN</span>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <button class="language-option" data-lang="en">
+                        <span class="flag">🇺🇸</span>
+                        <span>English</span>
+                    </button>
+                    <button class="language-option" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span>Español</span>
+                    </button>
+                </div>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M10 3V1M10 19V17M17 10H19M1 10H3M15.657 4.343L17.071 2.929M2.929 17.071L4.343 15.657M15.657 15.657L17.071 17.071M2.929 2.929L4.343 4.343"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+<!-- Hero Section -->
+<section class="project-hero">
+    <div class="hero-background">
+        <div class="hero-gradient"></div>
+    </div>
+    <div class="container">
+        <div class="project-header">
+            <span class="project-label" data-i18n="hero.label">Multi-Tenant SaaS Platform</span>
+            <h1 class="project-title" data-i18n="hero.title">Plugsite</h1>
+            <p class="project-subtitle" data-i18n="hero.subtitle">E-Commerce Platform for Minecraft Servers</p>
+            <p class="project-tagline" data-i18n="hero.tagline">
+                Complete multi-tenant SaaS platform designed specifically for Minecraft servers,
+                featuring PayPal integration, vendor withdrawal system, and advanced per-store customization.
+            </p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-icon status-dev">●</span>
+                    <span class="meta-value" data-i18n="hero.status">87% Complete - Active Development</span>
+                </div>
+                <div class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span class="meta-value" data-i18n="hero.commercial">Commercial SaaS Product</span>
+                </div>
+                <div class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span class="meta-value" data-i18n="hero.timeline">Early 2024 - Present</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://plugsite.onrender.com/" target="_blank" rel="noopener"
+                    class="btn btn-primary btn-large">
+                    <span data-i18n="hero.demo">Try Live Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15 5L5 15M15 5H8M15 5V12" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#architecture" class="btn btn-secondary btn-large" data-i18n="hero.architecture">View
+                    Architecture</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Showcase -->
+<section class="project-showcase-interactive">
+    <div class="container">
+        <div class="showcase-browser">
+            <div class="browser-header">
+                <div class="browser-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="browser-url">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1Z"
+                            stroke="currentColor" stroke-width="1.5" />
+                        <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                    <span>plugsite.onrender.com</span>
+                </div>
+            </div>
+            <div class="browser-content">
+                <img src="../static/images/plugsite.png" alt="Plugsite Interface"
+                    onerror="this.parentElement.classList.add('no-image')">
+                <div class="showcase-overlay">
+                    <a href="https://plugsite.onrender.com/" target="_blank" rel="noopener" class="overlay-cta">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.9" />
+                            <path d="M20 16L30 24L20 32V16Z" fill="white" />
+                        </svg>
+                        <span>View Live Platform</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="showcase-features">
+            <div class="feature-highlight">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 4L4 10L16 16L28 10L16 4Z" stroke="currentColor" stroke-width="2"
+                            stroke-linejoin="round" />
+                        <path d="M4 16L16 22L28 16" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                        <path d="M4 22L16 28L28 22" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h4 data-i18n="features.multitenant">Multi-Tenant Architecture</h4>
+                    <p data-i18n="features.multitenant.desc">Complete data isolation per store with independent sessions
+                    </p>
+                </div>
+            </div>
+            <div class="feature-highlight">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M16 8C13.79 8 12 9.79 12 12C12 14.21 13.79 16 16 16C18.21 16 20 14.21 20 12C20 9.79 18.21 8 16 8Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M16 18C11.58 18 8 20.69 8 24V26H24V24C24 20.69 20.42 18 16 18Z" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h4 data-i18n="features.withdrawal">Vendor Withdrawal System</h4>
+                    <p data-i18n="features.withdrawal.desc">Automated withdrawal requests with admin approval and chat
+                        support</p>
+                </div>
+            </div>
+            <div class="feature-highlight">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="6" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" />
+                        <path d="M6 12H26M10 16H12M16 16H18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h4 data-i18n="features.paypal">PayPal Integration</h4>
+                    <p data-i18n="features.paypal.desc">Secure payments with webhooks and automatic order processing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Business Problem -->
+<section class="project-section">
+    <div class="container">
+        <h2 data-i18n="market.title">The Market Problem</h2>
+        <p class="section-intro" data-i18n="market.intro">
+            Minecraft servers need to monetize their communities, but face significant barriers
+            when implementing their own store systems.
+        </p>
+
+        <div class="problem-solution-grid">
+            <div class="problem-box">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span data-i18n="market.problems">Current Problems</span>
+                </h3>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span data-i18n="market.prob.1">Generic store plugins without customization</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span data-i18n="market.prob.2">Lack of integration with modern payment systems</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span data-i18n="market.prob.3">No withdrawal system for administrators</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span data-i18n="market.prob.4">Manual inventory and order management</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span data-i18n="market.prob.5">Each server needs its own infrastructure</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span data-i18n="market.solution">Plugsite Solution</span>
+                </h3>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-i18n="market.sol.1">Complete customization per store (colors, logo, design)</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-i18n="market.sol.2">Complete PayPal integration with webhooks</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-i18n="market.sol.3">Automated withdrawal system with support chat</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-i18n="market.sol.4">Dashboard with real-time metrics</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-i18n="market.sol.5">Scalable multi-tenant architecture</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Vision -->
+<section class="project-section bg-light">
+    <div class="container">
+        <h2 data-i18n="vision.title">Product Vision</h2>
+        <p class="section-intro" data-i18n="vision.p1">
+            Plugsite was designed as a complete SaaS platform that allows any Minecraft server
+            to have its own professional store without technical knowledge or own infrastructure.
+        </p>
+        <p data-i18n="vision.p2">
+            The system implements multi-tenant architecture from the core, allowing multiple stores
+            to operate completely independently on the same infrastructure, with total data isolation,
+            individual customization and separate financial management.
+        </p>
+    </div>
+</section>
+
+<!-- Multi-Tenant Architecture -->
+<section class="project-section">
+    <div class="container">
+        <h2 data-i18n="multitenant.title">Multi-Tenant Architecture</h2>
+        <p class="section-intro" data-i18n="multitenant.intro">
+            The heart of Plugsite is its multi-tenant architecture that allows complete data isolation
+            for each store while sharing the same infrastructure.
+        </p>
+
+        <div class="architecture-grid">
+            <div class="architecture-item">
+                <h3 data-i18n="multitenant.isolation">Data Isolation</h3>
+                <p data-i18n="multitenant.isolation.desc">Each store has its own logical database with users, products,
+                    orders and
+                    completely separate configurations. Independent session system per store.</p>
+            </div>
+
+            <div class="architecture-item">
+                <h3 data-i18n="multitenant.users">Users per Store</h3>
+                <p data-i18n="multitenant.users.desc"><code>UsuarioTienda</code> model allows each store to manage its
+                    own customers with
+                    independent authentication and separate purchase history.</p>
+            </div>
+
+            <div class="architecture-item">
+                <h3 data-i18n="multitenant.customization">Individual Customization</h3>
+                <p data-i18n="multitenant.customization.desc">Each store can customize colors, logo, navbar, footer and
+                    generate dynamic CSS without affecting
+                    other stores in the system.</p>
+            </div>
+
+            <div class="architecture-item">
+                <h3 data-i18n="multitenant.balance">Separate Financial Balance</h3>
+                <p data-i18n="multitenant.balance.desc">Independent balance system per store with sales tracking,
+                    withdrawals and commissions. Each
+                    vendor manages their funds autonomously.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- System Architecture -->
+<section class="project-section bg-light" id="architecture">
+    <div class="container">
+        <h2 data-i18n="arch.title">System Architecture</h2>
+        <p class="section-intro" data-i18n="arch.intro">
+            Modern technology stack with Django, MongoDB and cloud services for maximum scalability.
+        </p>
+
+        <div class="architecture-diagram">
+            <div class="arch-layer">
+                <h3 data-i18n="arch.frontend">Frontend Layer</h3>
+                <p>HTML5 • CSS3 • JavaScript • Chart.js • Responsive Design</p>
+            </div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-layer">
+                <h3 data-i18n="arch.application">Application Layer</h3>
+                <p>Django 5.2.4 • 10 Modular Apps • Multi-Tenant Logic • Session Management</p>
+            </div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-layer">
+                <h3 data-i18n="arch.business">Business Logic</h3>
+                <p>BalanceService • WithdrawalService • PayPalService • Custom Decorators</p>
+            </div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-layer">
+                <h3 data-i18n="arch.data">Data Layer</h3>
+                <p>MongoDB (Djongo) • Multi-Tenant Collections • Decimal128 Handling</p>
+            </div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-layer">
+                <h3 data-i18n="arch.external">External Services</h3>
+                <p>PayPal SDK • Cloudinary • Render • SMTP</p>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3 data-i18n="arch.stack">Tech Stack</h3>
+            <div class="tech-badges">
+                <span class="tech-badge">Django 5.2.4</span>
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">Djongo</span>
+                <span class="tech-badge">PayPal SDK</span>
+                <span class="tech-badge">Cloudinary</span>
+                <span class="tech-badge">Chart.js</span>
+                <span class="tech-badge">Render</span>
+                <span class="tech-badge">Python 3.x</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section class="project-section">
+    <div class="container">
+        <h2 data-i18n="features.title">Main Features</h2>
+        <p class="section-intro" data-i18n="features.intro">
+            Complete e-commerce system with advanced features for Minecraft store management.
+        </p>
+
+        <div class="features-list">
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.products">Product Management</h3>
+                    <p data-i18n="features.products.desc">Complete product system with multiple images, categories,
+                        stock, prices and automatic
+                        delivery commands to Minecraft server.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.paypal.title">PayPal Integration</h3>
+                    <p data-i18n="features.paypal.full">Secure payments with PayPal SDK, webhooks for automatic
+                        confirmation, transaction
+                        management and refund system.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.withdrawal.title">Withdrawal System</h3>
+                    <p data-i18n="features.withdrawal.full">Vendors can request withdrawals of their earnings with
+                        approval system, support
+                        chat, status tracking and payment receipts.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.customization.title">Advanced Customization</h3>
+                    <p data-i18n="features.customization.full">Each store can customize colors, fonts, navbar, footer
+                        with dynamic CSS
+                        generation and real-time preview.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.dashboard">Dashboard with Metrics</h3>
+                    <p data-i18n="features.dashboard.desc">Real-time dashboard with sales charts, revenue, best-selling
+                        products, recent
+                        activity and period statistics.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.chat">Chat System</h3>
+                    <p data-i18n="features.chat.desc">Real-time chat for withdrawal support, communication with
+                        administrators and request
+                        management with complete history.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.community">Server Community</h3>
+                    <p data-i18n="features.community.desc">Public server directory with reviews, votes, image gallery
+                        and verification
+                        system.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                    </svg>
+                </span>
+                <div>
+                    <h3 data-i18n="features.coupons">Discount Codes</h3>
+                    <p data-i18n="features.coupons.desc">Coupon system with percentages, single use per account,
+                        expiration dates and
+                        automatic command to verify expired codes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Engineering Decisions -->
+<section class="project-section bg-light">
+    <div class="container">
+        <h2 data-i18n="decisions.title">Engineering Decisions</h2>
+        <p class="section-intro" data-i18n="decisions.intro">
+            Each technical decision was made considering scalability, maintainability and user experience.
+        </p>
+
+        <div class="decisions-list">
+            <div class="decision-item">
+                <h3 data-i18n="decisions.mongodb">Why MongoDB with Djongo?</h3>
+                <p data-i18n="decisions.mongodb.desc">MongoDB allows flexibility in data schema, ideal for a
+                    multi-tenant system where
+                    each store can have unique configurations. Djongo provides Django ORM interface
+                    while maintaining MongoDB's power.</p>
+            </div>
+
+            <div class="decision-item">
+                <h3 data-i18n="decisions.multitenant">Why multi-tenant architecture from the start?</h3>
+                <p data-i18n="decisions.multitenant.desc">Designing multi-tenancy from the core avoids costly future
+                    refactorings. Allows
+                    horizontal scaling by adding stores without modifying the base architecture.</p>
+            </div>
+
+            <div class="decision-item">
+                <h3 data-i18n="decisions.sessions">Why separate sessions per store?</h3>
+                <p data-i18n="decisions.sessions.desc">Allows a user to have different accounts in multiple stores
+                    without conflicts. Improves
+                    security by completely isolating authentication sessions.</p>
+            </div>
+
+            <div class="decision-item">
+                <h3 data-i18n="decisions.cloudinary">Why Cloudinary for images?</h3>
+                <p data-i18n="decisions.cloudinary.desc">Free hosting on Render doesn't guarantee file persistence.
+                    Cloudinary provides CDN,
+                    automatic image optimization and reliable storage.</p>
+            </div>
+
+            <div class="decision-item">
+                <h3 data-i18n="decisions.services">Why separate services (BalanceService, WithdrawalService)?</h3>
+                <p data-i18n="decisions.services.desc">Separation of responsibilities facilitates testing, maintenance
+                    and reusability. Complex
+                    business logic is encapsulated in independent services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Implementation Status -->
+<section class="project-section">
+    <div class="container">
+        <h2 data-i18n="status.title">Implementation Status</h2>
+        <p class="section-intro" data-i18n="status.intro">
+            Complete system audit shows 87% completeness with 100% operational core functionalities.
+        </p>
+
+        <div class="roadmap-container">
+            <div class="roadmap-column">
+                <h3 class="roadmap-status implemented">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span data-i18n="status.implemented">Fully Implemented</span>
+                </h3>
+                <ul class="roadmap-list">
+                    <li data-i18n="status.impl.1">Dual authentication system (owners + store users)</li>
+                    <li data-i18n="status.impl.3">Product CRUD with multiple images</li>
+                    <li data-i18n="status.impl.4">Category system per store</li>
+                    <li data-i18n="status.impl.5">Discount codes with expiration</li>
+                    <li data-i18n="status.impl.6">Shopping cart per store</li>
+                    <li data-i18n="status.impl.7">Complete PayPal integration</li>
+                    <li data-i18n="status.impl.8">Withdrawal system for vendors</li>
+                    <li data-i18n="status.impl.9">Withdrawal administration panel</li>
+                    <li data-i18n="status.impl.10">Dashboard with real-time metrics</li>
+                    <li data-i18n="status.impl.11">Store customization (colors, navbar)</li>
+                    <li data-i18n="status.impl.12">Server community system</li>
+                    <li data-i18n="status.impl.13">Real-time chat</li>
+                    <li data-i18n="status.impl.14">Balance and financial movements</li>
+                </ul>
+            </div>
+
+            <div class="roadmap-column">
+                <h3 class="roadmap-status in-progress">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    <span data-i18n="status.progress">In Development</span>
+                </h3>
+                <ul class="roadmap-list">
+                    <li data-i18n="status.prog.1">Customer view per store</li>
+                    <li data-i18n="status.prog.2">Advanced analytics dashboard</li>
+                    <li data-i18n="status.prog.3">Index and footer customization</li>
+                    <li data-i18n="status.prog.4">Persistent notification system</li>
+                    <li data-i18n="status.prog.5">Global search in dashboard</li>
+                </ul>
+            </div>
+
+            <div class="roadmap-column">
+                <h3 class="roadmap-status planned">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                    <span data-i18n="status.planned">Planned</span>
+                </h3>
+                <ul class="roadmap-list">
+                    <li data-i18n="status.plan.1">Pre-designed template system</li>
+                    <li data-i18n="status.plan.2">Minecraft API integration (server status)</li>
+                    <li data-i18n="status.plan.3">Discord API integration</li>
+                    <li data-i18n="status.plan.4">Real-time server status view</li>
+                    <li data-i18n="status.plan.5">Downloadable plugin system</li>
+                    <li data-i18n="status.plan.6">Report export</li>
+                    <li data-i18n="status.plan.7">Custom webhooks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Challenges -->
+<section class="project-section bg-light">
+    <div class="container">
+        <h2 data-i18n="challenges.title">Technical Challenges Solved</h2>
+        <p class="section-intro" data-i18n="challenges.intro">
+            Complex problems that required specific architectural solutions.
+        </p>
+
+        <div class="limitations-grid">
+            <div class="limitation-item">
+                <h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span data-i18n="challenges.isolation">Multi-Tenant Data Isolation</span>
+                </h4>
+                <p data-i18n="challenges.isolation.desc">Implementation of automatic filters at ORM level to ensure each
+                    store only accesses
+                    its own data. Independent session system per store.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span data-i18n="challenges.decimal">Decimal128 Handling (MongoDB)</span>
+                </h4>
+                <p data-i18n="challenges.decimal.desc">MongoDB uses Decimal128 for financial precision. Implementation
+                    of safe conversions with
+                    try-except in calculated properties to avoid type errors.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                    <span data-i18n="challenges.paypal">PayPal Integration with Multi-Tenant</span>
+                </h4>
+                <p data-i18n="challenges.paypal.desc">Each store needs its own PayPal configuration. Dynamic return URLs
+                    system and
+                    transaction tracking per store with webhooks.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                    <span data-i18n="challenges.css">Dynamic CSS per Store</span>
+                </h4>
+                <p data-i18n="challenges.css.desc">Real-time custom CSS generation based on each store's configuration.
+                    Dedicated
+                    endpoint serving CSS with custom CSS variables.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span data-i18n="challenges.balance">Financial Balance System</span>
+                </h4>
+                <p data-i18n="challenges.balance.desc">Precise tracking of sales, commissions and withdrawals with
+                    immutable movement log. Calculation
+                    of available vs pending balance considering withdrawals in process.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span data-i18n="challenges.images">Multiple Image Management</span>
+                </h4>
+                <p data-i18n="challenges.images.desc">Sortable image system with Cloudinary. Each product can have
+                    multiple images with
+                    customizable order and main image designation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why I Built This -->
+<section class="project-section">
+    <div class="container">
+        <h2 data-i18n="why.title">Why I Built This</h2>
+        <div class="why-content">
+            <p data-i18n="why.p1">
+                Plugsite wasn't originally my idea—it came from my friend and business partner,
+                <strong>Luis Elías Sánchez</strong>. He saw the real need in the Minecraft server community:
+                owners wanted to monetize their communities but lacked the technical resources and financial
+                means to implement their own store systems. I shared his vision and took on the challenge of
+                bringing it to life through code.
+            </p>
+            <p data-i18n="why.p2">
+                We're both co-owners of this project and share the profits equally. Luis brings the business
+                vision and understanding of what server owners need, while I handle the technical architecture
+                and implementation. This partnership has been crucial—having someone who deeply understands
+                the market while I focus on building a robust technical solution.
+            </p>
+            <p data-i18n="why.p3">
+                The most interesting technical challenge was designing a multi-tenant architecture from scratch.
+                It's not just adding a "tenant_id" field to tables—it's thinking about data isolation, independent
+                sessions, per-store customization, separate financial balances, and horizontal scalability. Every
+                architectural decision had to consider how it would affect multiple stores operating simultaneously.
+            </p>
+            <p data-i18n="why.p4">
+                This project taught me the difference between building an application and building a platform.
+                A platform must be flexible enough to adapt to different use cases, yet structured enough to
+                maintain consistency and security. It's a delicate balance between customization and standardization.
+            </p>
+            <p data-i18n="why.p5">
+                Additionally, working with real financial systems (PayPal, withdrawals, commissions) forced me
+                to think about data integrity, atomic transactions, auditing, and traceability in ways that
+                academic projects never require. Every cent must be traceable, every transaction must be immutable,
+                and every withdrawal must have a complete approval trail.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="project-cta">
+    <div class="container">
+        <h2 data-i18n="cta.title">Explore Plugsite</h2>
+        <p data-i18n="cta.subtitle">Experience the platform in production or review the technical implementation.</p>
+        <div class="cta-buttons">
+            <a href="https://plugsite.onrender.com/" target="_blank" class="btn btn-primary" data-i18n="cta.demo">View
+                Live Demo</a>
+            <a href="../index.html#projects" class="btn btn-secondary" data-i18n="cta.back">Back to Projects</a>
+        </div>
+        <p class="cta-note" data-i18n="cta.note">
+            Note: The platform is in active production.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p data-i18n="footer.copyright">&copy; 2026 Justin Ocaña. Building scalable SaaS platforms.</p>
+    </div>
+</footer>
+
+<script src="../static/js/main.js"></script>
+<script src="../static/js/plugsite-translations.js"></script>
+</body>
+
+</html>

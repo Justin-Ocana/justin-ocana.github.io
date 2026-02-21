@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda Virtual EIWA - Collaborative academic platform for task management and study groups">
+    <title>Agenda Virtual EIWA - Justin Ocaña</title>
+    <link rel="icon" type="image/svg+xml" href="../static/images/favicon.svg">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                    <path d="M12 16L16 20L20 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 12V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <a href="../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span data-i18n="nav.back">Back to Portfolio</span>
+            </a>
+            <div class="nav-actions">
+                <div class="language-selector">
+                    <button class="language-toggle" id="languageToggle" aria-label="Change language">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 10H18M10 2C11.5 4 12 7 12 10C12 13 11.5 16 10 18M10 2C8.5 4 8 7 8 10C8 13 8.5 16 10 18" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="language-text" id="currentLang">EN</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="language-option" data-lang="en">
+                            <span class="flag">🇺🇸</span>
+                            <span>English</span>
+                        </button>
+                        <button class="language-option" data-lang="es">
+                            <span class="flag">🇪🇸</span>
+                            <span>Español</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 3V1M10 19V17M17 10H19M1 10H3M15.657 4.343L17.071 2.929M2.929 17.071L4.343 15.657M15.657 15.657L17.071 17.071M2.929 2.929L4.343 4.343" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="project-header">
+                <span class="project-label" data-i18n="hero.label">Educational Platform</span>
+                <h1 class="project-title" data-i18n="hero.title">Agenda Virtual EIWA</h1>
+                <p class="project-subtitle" data-i18n="hero.subtitle">Digital Academic Planner for Students</p>
+                <p class="project-tagline" data-i18n="hero.tagline">
+                    Transforming EIWA's physical agenda into a collaborative digital platform. 
+                    Built with Django and PostgreSQL for students who need better organization tools.
+                </p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon status-live">●</span>
+                        <span class="meta-value" data-i18n="hero.status">Production-ready (v1.0.5)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">⚙</span>
+                        <span class="meta-value" data-i18n="hero.focus">Backend Architecture Focus</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">🗓</span>
+                        <span class="meta-value" data-i18n="hero.timeline">December 2024 - Present</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://agendavirtualeiwa.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                        <span data-i18n="hero.demo">Try Live Demo</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M15 5L5 15M15 5H8M15 5V12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#architecture" class="btn btn-secondary btn-large" data-i18n="hero.architecture">View Architecture</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase -->
+    <section class="project-showcase-interactive">
+        <div class="container">
+            <div class="showcase-browser">
+                <div class="browser-header">
+                    <div class="browser-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="browser-url">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span>agendavirtualeiwa.onrender.com</span>
+                    </div>
+                </div>
+                <div class="browser-content">
+                    <img src="../static/images/agenda_virtual.png" alt="Agenda Virtual EIWA Interface" 
+                         onerror="this.parentElement.classList.add('no-image')">
+                    <div class="showcase-overlay">
+                        <a href="https://agendavirtualeiwa.onrender.com/" target="_blank" rel="noopener" class="overlay-cta">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.9"/>
+                                <path d="M20 16L30 24L20 32V16Z" fill="white"/>
+                            </svg>
+                            <span>View Live Platform</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showcase-features">
+                <div class="feature-highlight">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L4 10L16 16L28 10L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M4 16L16 22L28 16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M4 22L16 28L28 22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4 data-i18n="features.role">Role-Based Permissions</h4>
+                        <p data-i18n="features.role.desc">Hierarchical system with configurable access control</p>
+                    </div>
+                </div>
+                <div class="feature-highlight">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 4V8M16 24V28M28 16H24M8 16H4M24.5 7.5L21.5 10.5M10.5 21.5L7.5 24.5M24.5 24.5L21.5 21.5M10.5 10.5L7.5 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4 data-i18n="features.collab">Real-Time Collaboration</h4>
+                        <p data-i18n="features.collab.desc">Live notifications and instant updates across devices</p>
+                    </div>
+                </div>
+                <div class="feature-highlight">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="6" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 10H28M10 6V10M22 6V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4 data-i18n="features.calendar">Smart Calendar</h4>
+                        <p data-i18n="features.calendar.desc">Integrated calendar with workload tracking</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="project-section">
+        <div class="container">
+            <div class="section-content">
+                <h2 data-i18n="problem.title">The Problem</h2>
+                <p class="lead" data-i18n="problem.p1">
+                    At EIWA (my school), students use physical agendas to track assignments and deadlines. 
+                    However, distracted students often forget to write things down, lose track of tasks, 
+                    or struggle to stay organized with paper-based systems.
+                </p>
+                <p data-i18n="problem.p2">
+                    The physical agenda works for some, but for students who need better organization tools, 
+                    there was no digital alternative that understood our school's workflow and collaboration needs.
+                </p>
+                <p data-i18n="problem.p3">
+                    Agenda Virtual EIWA was created to solve this problem.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <div class="section-content">
+                <h2 data-i18n="solution.title">The Solution</h2>
+                <p class="lead" data-i18n="solution.lead">
+                    Agenda Virtual EIWA is a digital platform that brings the physical agenda online, 
+                    adding collaboration features and smart organization tools:
+                </p>
+                <ul class="solution-list">
+                    <li data-i18n="solution.1">Never forget to write down assignments - classmates can share tasks instantly</li>
+                    <li data-i18n="solution.2">Group collaboration with role-based permissions (Leader / Co-leader / Member)</li>
+                    <li data-i18n="solution.3">Automatic reminders and notifications for upcoming deadlines</li>
+                    <li data-i18n="solution.4">Calendar view to visualize workload and plan ahead</li>
+                    <li data-i18n="solution.5">Individual task tracking - mark your own progress independently</li>
+                    <li data-i18n="solution.6">Works on any device - phone, tablet, or computer</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Stack -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="tech.title">Technical Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L5 12.5L20 20L35 12.5L20 5Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M5 20L20 27.5L35 20" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M5 27.5L20 35L35 27.5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="tech.backend">Backend</h3>
+                    <ul>
+                        <li>Django 5.2.7</li>
+                        <li>Python 3.11</li>
+                        <li>Django REST Framework</li>
+                        <li>Gunicorn & Uvicorn</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="5" width="30" height="30" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M5 15H35M15 5V35" stroke="currentColor" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="tech.database">Database</h3>
+                    <ul>
+                        <li>PostgreSQL (Neon DB)</li>
+                        <li>15+ optimized models</li>
+                        <li>Relational design</li>
+                        <li>Query optimization</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 10H30M10 20H30M10 30H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="tech.frontend">Frontend</h3>
+                    <ul>
+                        <li>Vanilla JavaScript</li>
+                        <li>Custom CSS (21 files)</li>
+                        <li>Responsive design</li>
+                        <li>Dark mode support</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M20 10V20L27.5 23.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="tech.infrastructure">Infrastructure</h3>
+                    <ul>
+                        <li>Render.com hosting</li>
+                        <li>WhiteNoise static files</li>
+                        <li>SSL/HTTPS</li>
+                        <li>Automated deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="keyfeatures.title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">01</div>
+                    <h3 data-i18n="keyfeatures.1.title">Advanced Permission System</h3>
+                    <p data-i18n="keyfeatures.1.desc">
+                        Hierarchical role system with Leader, Co-leader, and Member roles. Granular permissions 
+                        for task creation, editing, and deletion with approval workflows.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">02</div>
+                    <h3 data-i18n="keyfeatures.2.title">Real-Time Notifications</h3>
+                    <p data-i18n="keyfeatures.2.desc">
+                        Push notifications system with browser support, notification center, and badge counters. 
+                        16 different activity types tracked and notified.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">03</div>
+                    <h3 data-i18n="keyfeatures.3.title">Group Management</h3>
+                    <p data-i18n="keyfeatures.3.desc">
+                        Unique invitation codes, join approval system, member warnings (3-strike system), 
+                        and complete activity history logging.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">04</div>
+                    <h3 data-i18n="keyfeatures.4.title">Task System</h3>
+                    <p data-i18n="keyfeatures.4.desc">
+                        Tasks with priorities, due dates, subject association, individual completion tracking, 
+                        and collaborative editing with approval workflows.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">05</div>
+                    <h3 data-i18n="keyfeatures.5.title">Calendar Integration</h3>
+                    <p data-i18n="keyfeatures.5.desc">
+                        Monthly calendar view with task visualization, filtering by group and subject, 
+                        priority indicators, and deadline tracking.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">06</div>
+                    <h3 data-i18n="keyfeatures.6.title">Modern UI/UX</h3>
+                    <p data-i18n="keyfeatures.6.desc">
+                        Responsive design, dark mode, smooth animations, toast notifications, keyboard shortcuts, 
+                        and WCAG 2.1 accessibility compliance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Overview Diagram -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="arch.overview">System Overview</h2>
+            <div class="system-diagram">
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <circle cx="16" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 26C8 21.5817 11.5817 18 16 18C20.4183 18 24 21.5817 24 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span>User</span>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node">
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="20" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Group</span>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node">
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M11 16L14 19L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span>Task</span>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node">
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 4V12M16 12L20 8M16 12L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="6" y="14" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Approval</span>
+                    </div>
+                </div>
+                
+                <div class="diagram-apps">
+                    <h3 data-i18n="arch.apps">Modular App Architecture</h3>
+                    <div class="apps-flow">
+                        <div class="app-node">accounts</div>
+                        <div class="app-arrow">↔</div>
+                        <div class="app-node">groups</div>
+                        <div class="app-arrow">↔</div>
+                        <div class="app-node">tasks</div>
+                        <div class="app-arrow">↔</div>
+                        <div class="app-node">subjects</div>
+                    </div>
+                    <div class="apps-flow">
+                        <div class="app-node">calendar</div>
+                        <div class="app-arrow">↔</div>
+                        <div class="app-node">notifications</div>
+                        <div class="app-arrow">↔</div>
+                        <div class="app-node">tracking</div>
+                        <div class="app-arrow">↔</div>
+                        <div class="app-node">core</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Overview -->
+    <section class="project-section" id="architecture">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="arch.title">Architecture Highlights</h2>
+            <div class="architecture-highlights">
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Custom User model (email authentication)</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>8 modular Django apps (separation of concerns)</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M3 10H21" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>15+ relational models</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"/>
+                        <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Approval system using request models</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>JSON-based activity logging</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Optimized queries (select_related / prefetch_related)</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M3 9H21" stroke="currentColor" stroke-width="2"/>
+                        <path d="M9 21V9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>PostgreSQL cloud deployment (Neon)</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 12C21 16.9706 16.9706 21 12 21M21 12C21 7.02944 16.9706 3 12 3M21 12H3M12 21C7.02944 21 3 16.9706 3 12M12 21C13.6569 21 15 16.9706 15 12C15 7.02944 13.6569 3 12 3M12 21C10.3431 21 9 16.9706 9 12C9 7.02944 10.3431 3 12 3M3 12C3 7.02944 7.02944 3 12 3" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Production deployment on Render</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Evolution -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="versions.title">Continuous Development & Versioning</h2>
+            <p class="evolution-intro" data-i18n="versions.intro">
+                EIWA is under active development. Below are major milestones that shaped the platform's evolution.
+            </p>
+            <div class="timeline-versions">
+                <div class="version-item">
+                    <div class="version-header">
+                        <span class="version-number">v1.0.5</span>
+                        <span class="version-label" data-i18n="versions.current">CURRENT</span>
+                        <span class="version-date">February 2026</span>
+                    </div>
+                    <h3 data-i18n="v105.title">Full Personalization & File System</h3>
+                    <ul class="version-features">
+                        <li data-i18n="v105.feat1">Customizable SVG avatar system (71 unique avatars, 12 color themes)</li>
+                        <li data-i18n="v105.feat2">Experimental document attachment system with permission layers</li>
+                        <li data-i18n="v105.feat3">Multi-group unified dashboard view</li>
+                        <li data-i18n="v105.feat4">Drag & Drop file upload with preview</li>
+                        <li data-i18n="v105.feat5">Performance optimizations in unified task queries</li>
+                    </ul>
+                </div>
+
+                <div class="version-item">
+                    <div class="version-header">
+                        <span class="version-number">v1.0.4</span>
+                        <span class="version-date">February 2026</span>
+                    </div>
+                    <h3 data-i18n="v104.title">Visual Polish & Error Handling</h3>
+                    <ul class="version-features">
+                        <li data-i18n="v104.feat1">Dark mode color corrections for task headers and buttons</li>
+                        <li data-i18n="v104.feat2">Custom error pages (404, 403, 500) with theme support</li>
+                        <li data-i18n="v104.feat3">Improved visual consistency across the platform</li>
+                    </ul>
+                </div>
+
+                <div class="version-item">
+                    <div class="version-header">
+                        <span class="version-number">v1.0.3</span>
+                        <span class="version-date">February 2026</span>
+                    </div>
+                    <h3 data-i18n="v103.title">Interactive Dashboard</h3>
+                    <ul class="version-features">
+                        <li data-i18n="v103.feat1">Clickable statistics dashboard with smart filtering</li>
+                        <li data-i18n="v103.feat2">Automatic task archiving system (30-day threshold)</li>
+                        <li data-i18n="v103.feat3">Configurable productivity metrics</li>
+                        <li data-i18n="v103.feat4">Improved visual hierarchy and UI feedback</li>
+                    </ul>
+                </div>
+
+                <div class="version-item">
+                    <div class="version-header">
+                        <span class="version-number">v1.0.1</span>
+                        <span class="version-date">December 2024</span>
+                    </div>
+                    <h3 data-i18n="v101.title">Smart Moderation System</h3>
+                    <ul class="version-features">
+                        <li data-i18n="v101.feat1">Intelligent content moderation with leet speak detection</li>
+                        <li data-i18n="v101.feat2">Configurable moderation levels per group (Off, Censor, Block)</li>
+                        <li data-i18n="v101.feat3">Weekly workload tracking in calendar</li>
+                        <li data-i18n="v101.feat4">Improved group analytics and activity visualization</li>
+                    </ul>
+                </div>
+
+                <div class="version-item">
+                    <div class="version-header">
+                        <span class="version-number">v1.0.0</span>
+                        <span class="version-date">December 2024</span>
+                    </div>
+                    <h3 data-i18n="v100.title">Initial Release</h3>
+                    <ul class="version-features">
+                        <li data-i18n="v100.feat1">Collaborative task management with role-based permissions</li>
+                        <li data-i18n="v100.feat2">Calendar integration with monthly and weekly views</li>
+                        <li data-i18n="v100.feat3">Real-time notification system</li>
+                        <li data-i18n="v100.feat4">PWA support with offline capabilities</li>
+                        <li data-i18n="v100.feat5">Responsive design with dark mode</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="beta-note">
+                Beta testing feedback helped refine moderation, UX and personalization systems.
+            </p>
+        </div>
+    </section>
+
+    <!-- Usage Metrics -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="usage.title">Real-World Usage</h2>
+            <p class="metrics-intro" data-i18n="usage.intro">
+                Currently being used by students at EIWA for daily academic organization.
+            </p>
+            <div class="usage-metrics">
+                <div class="usage-card">
+                    <div class="usage-number">15+</div>
+                    <div class="usage-label" data-i18n="usage.students">Active Students</div>
+                </div>
+                <div class="usage-card">
+                    <div class="usage-number">8+</div>
+                    <div class="usage-label" data-i18n="usage.groups">Study Groups</div>
+                </div>
+                <div class="usage-card">
+                    <div class="usage-number">200+</div>
+                    <div class="usage-label" data-i18n="usage.tasks">Tasks Created</div>
+                </div>
+                <div class="usage-card">
+                    <div class="usage-number">50+</div>
+                    <div class="usage-label" data-i18n="usage.requests">Approval Requests</div>
+                </div>
+            </div>
+            <p class="metrics-note" data-i18n="usage.feedback">
+                Platform has been actively used since December 2024, with continuous improvements 
+                based on real student feedback.
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Engineering Decisions -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="decisions.title">Key Engineering Decisions</h2>
+            <div class="decisions-grid">
+                <div class="decision-card">
+                    <h3 data-i18n="decision.modular.q">Why modular apps?</h3>
+                    <p data-i18n="decision.modular.a">Maintainability and separation of responsibilities. Each app handles a specific domain, making the codebase easier to navigate and scale.</p>
+                </div>
+                <div class="decision-card">
+                    <h3 data-i18n="decision.postgres.q">Why PostgreSQL?</h3>
+                    <p data-i18n="decision.postgres.a">Better relational integrity and scalability. PostgreSQL's advanced features support complex queries and ensure data consistency.</p>
+                </div>
+                <div class="decision-card">
+                    <h3 data-i18n="decision.roles.q">Why custom role system?</h3>
+                    <p data-i18n="decision.roles.a">Need for per-group configurable permissions. Django's built-in groups weren't flexible enough for dynamic, group-specific permission rules.</p>
+                </div>
+                <div class="decision-card">
+                    <h3 data-i18n="decision.json.q">Why JSON metadata logging?</h3>
+                    <p data-i18n="decision.json.a">Flexible extensibility without schema explosion. Activity types can evolve without database migrations for each new field.</p>
+                </div>
+            </div>
+            
+            <div class="tradeoffs-section">
+                <h2 class="section-title-center" data-i18n="tradeoffs.title">Trade-offs Considered</h2>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card">
+                        <h4 data-i18n="tradeoff.groups.q">Why not use Django Groups?</h4>
+                        <p data-i18n="tradeoff.groups.a">Django's built-in Groups are global and static. We needed per-group dynamic permissions that could be configured by group leaders in real-time.</p>
+                    </div>
+                    <div class="tradeoff-card">
+                        <h4 data-i18n="tradeoff.nosql.q">Why not NoSQL?</h4>
+                        <p data-i18n="tradeoff.nosql.a">Strong relational integrity was required. Tasks, groups, users, and permissions have complex relationships that benefit from SQL's ACID guarantees.</p>
+                    </div>
+                    <div class="tradeoff-card">
+                        <h4 data-i18n="tradeoff.framework.q">Why not a frontend framework?</h4>
+                        <p data-i18n="tradeoff.framework.a">Vanilla JavaScript kept the stack simple and reduced complexity. For this use case, Django templates with progressive enhancement were sufficient.</p>
+                    </div>
+                    <div class="tradeoff-card">
+                        <h4 data-i18n="tradeoff.microservices.q">Why not microservices?</h4>
+                        <p data-i18n="tradeoff.microservices.a">Monolithic Django app was more appropriate for the scale. Microservices would add unnecessary complexity for a single-developer project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experimental Features -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="experimental.title">Experimental Features</h2>
+            <p class="experimental-intro" data-i18n="experimental.intro">
+                Transparent about innovation and ongoing development.
+            </p>
+            <div class="experimental-grid">
+                <div class="experimental-card">
+                    <span class="experimental-badge" data-i18n="experimental.label">Experimental</span>
+                    <h3 data-i18n="experimental.files">File Attachment System</h3>
+                    <p data-i18n="experimental.files.desc">Document upload with permission layers, validation, and approval workflows. Currently in testing phase with active users.</p>
+                </div>
+                <div class="experimental-card">
+                    <span class="experimental-badge" data-i18n="beta.label">Beta</span>
+                    <h3 data-i18n="experimental.unified">Multi-Group Unified View</h3>
+                    <p data-i18n="experimental.unified.desc">Dashboard that aggregates tasks and statistics across multiple groups. Recommended for single-group use while being refined.</p>
+                </div>
+                <div class="experimental-card">
+                    <span class="experimental-badge" data-i18n="progress.label">In Progress</span>
+                    <h3 data-i18n="experimental.offline">Offline Support</h3>
+                    <p data-i18n="experimental.offline.desc">PWA capabilities with service workers for offline task viewing and synchronization when connection is restored.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges & Learnings -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="challenges.title">Technical Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <h3 data-i18n="challenge1.title">Designing a granular permission system without conflicts</h3>
+                    <p class="challenge-desc" data-i18n="challenge1.desc">
+                        Creating a flexible permission model that could handle multiple roles and configurable 
+                        settings while preventing permission conflicts and security holes.
+                    </p>
+                    <p class="challenge-solution">
+                        <strong data-i18n="solution">Solution:</strong> <span data-i18n="challenge1.solution">Implemented hierarchical validation with permission checks at 
+                        model, view, and template levels. Used Django's ORM to enforce database-level constraints.</span>
+                    </p>
+                </div>
+                <div class="challenge-card">
+                    <h3 data-i18n="challenge2.title">Preventing N+1 query problems</h3>
+                    <p class="challenge-desc" data-i18n="challenge2.desc">
+                        As the application grew, inefficient database queries caused performance degradation, 
+                        especially in list views with related objects.
+                    </p>
+                    <p class="challenge-solution">
+                        <strong data-i18n="solution">Solution:</strong> <span data-i18n="challenge2.solution">Systematic use of select_related() and prefetch_related() 
+                        throughout the codebase. Added database indexes on frequently queried fields.</span>
+                    </p>
+                </div>
+                <div class="challenge-card">
+                    <h3 data-i18n="challenge3.title">Implementing approval workflows cleanly</h3>
+                    <p class="challenge-desc" data-i18n="challenge3.desc">
+                        Task creation and editing needed approval systems that were flexible enough to support 
+                        different group configurations without code duplication.
+                    </p>
+                    <p class="challenge-solution">
+                        <strong data-i18n="solution">Solution:</strong> <span data-i18n="challenge3.solution">Created separate request models (TaskRequest, TaskEditRequest) 
+                        with JSON fields for proposed changes, enabling clean approval logic.</span>
+                    </p>
+                </div>
+                <div class="challenge-card">
+                    <h3 data-i18n="challenge4.title">Maintaining accessibility standards (WCAG 2.1)</h3>
+                    <p class="challenge-desc" data-i18n="challenge4.desc">
+                        Ensuring the platform was usable by everyone, including users with disabilities, 
+                        while maintaining a modern aesthetic.
+                    </p>
+                    <p class="challenge-solution">
+                        <strong data-i18n="solution">Solution:</strong> <span data-i18n="challenge4.solution">Implemented keyboard navigation, ARIA labels, sufficient 
+                        color contrast, and minimum touch target sizes throughout the interface.</span>
+                    </p>
+                </div>
+                <div class="challenge-card">
+                    <h3 data-i18n="challenge5.title">Structuring scalable database relationships</h3>
+                    <p class="challenge-desc" data-i18n="challenge5.desc">
+                        Designing a database schema that could evolve without requiring major migrations 
+                        or breaking existing functionality.
+                    </p>
+                    <p class="challenge-solution">
+                        <strong data-i18n="solution">Solution:</strong> <span data-i18n="challenge5.solution">Used JSON fields for flexible metadata, proper foreign key 
+                        relationships, and Django migrations for controlled schema evolution.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="learnings-section">
+                <h2 class="section-title-center" data-i18n="lessons.title">Lessons Learned</h2>
+                <div class="learnings-list">
+                    <div class="learning-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="lesson1">Design the database before building views</span>
+                    </div>
+                    <div class="learning-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="lesson2">Modular structure prevents long-term chaos</span>
+                    </div>
+                    <div class="learning-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="lesson3">Backend permission validation is critical</span>
+                    </div>
+                    <div class="learning-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="lesson4">UX details matter as much as logic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complexity Metrics -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="metrics.title">Complexity Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">8</div>
+                    <div class="metric-label" data-i18n="metrics.apps">Django Apps</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">15+</div>
+                    <div class="metric-label" data-i18n="metrics.models">Relational Models</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">150+</div>
+                    <div class="metric-label" data-i18n="metrics.checks">QA Verification Checks</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">16</div>
+                    <div class="metric-label" data-i18n="metrics.activities">Tracked Activity Types</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">3</div>
+                    <div class="metric-label" data-i18n="metrics.levels">Permission Hierarchy Levels</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">5</div>
+                    <div class="metric-label" data-i18n="metrics.versions">Major Versions</div>
+                </div>
+            </div>
+            <div class="metrics-summary">
+                <p data-i18n="decisions.conclusion">
+                    Successfully deployed and actively used by students and teachers for academic collaboration. 
+                    The platform demonstrates proficiency in full-stack development, database design, and 
+                    building scalable web applications with continuous iteration based on user feedback.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Improvements -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title-center" data-i18n="improvements.title">Planned Improvements</h2>
+            <div class="improvements-grid">
+                <div class="improvement-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="4" y="6" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 10H28M10 6V10M22 6V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3 data-i18n="improvement.calendar">Google Calendar Integration</h3>
+                    <p data-i18n="improvement.calendar.desc">Sync tasks with external calendars for better workflow integration</p>
+                </div>
+                <div class="improvement-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 10V16L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3 data-i18n="improvement.search">Advanced Search System</h3>
+                    <p data-i18n="improvement.search.desc">Full-text search across tasks, groups, and subjects with filters</p>
+                </div>
+                <div class="improvement-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 4V28M4 16H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h3 data-i18n="improvement.offline">Enhanced Offline Mode</h3>
+                    <p data-i18n="improvement.offline.desc">Complete offline functionality with background sync</p>
+                </div>
+                <div class="improvement-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M8 12L16 8L24 12M8 12L16 16M8 12V20L16 24M24 12L16 16M24 12V20L16 24M16 16V24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 data-i18n="improvement.files">File Attachments (Stable)</h3>
+                    <p data-i18n="improvement.files.desc">Move experimental file system to stable production release</p>
+                </div>
+                <div class="improvement-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M6 12H26M12 6V12" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h3 data-i18n="improvement.email">Email Notifications</h3>
+                    <p data-i18n="improvement.email.desc">Configurable email alerts for important events and deadlines</p>
+                </div>
+                <div class="improvement-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M4 16H28M16 4V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3 data-i18n="improvement.analytics">Analytics Dashboard</h3>
+                    <p data-i18n="improvement.analytics.desc">Detailed productivity metrics and group performance insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <div class="next-project">
+                <span class="next-label" data-i18n="next.title">Next Project</span>
+                <h2 data-i18n="next.southernpos">SouthernPOS</h2>
+                <p data-i18n="next.southernpos.desc">Cloud-based POS system with multi-tenant architecture for restaurants and retail businesses</p>
+                <a href="southernpos.html" class="btn btn-primary">
+                    <span data-i18n="next.view">View Project</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Justin Ocaña. Built with logic and purpose.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Justin-Ocana" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:justin.ocana.molina@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/project-page.js"></script>
+    <script src="../static/js/agenda-translations.js"></script>
+</body>
+</html>

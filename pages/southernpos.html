@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SouthernPOS - Cloud-based Point of Sale system with multi-tenant architecture">
+    <title>SouthernPOS - Justin Ocaña</title>
+    <link rel="icon" type="image/svg+xml" href="../static/images/favicon.svg">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/project-page.css">
+    <link rel="stylesheet" href="../static/css/southernpos-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="southernpos-page">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2.5" />
+                    <path d="M12 16L16 20L20 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 12V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+            </a>
+            <a href="../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span data-i18n="nav.back">Back to Portfolio</span>
+            </a>
+            <div class="nav-actions">
+                <div class="language-selector">
+                    <button class="language-toggle" id="languageToggle" aria-label="Change language">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M2 10H18M10 2C11.5 4 12 7 12 10C12 13 11.5 16 10 18M10 2C8.5 4 8 7 8 10C8 13 8.5 16 10 18"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span class="language-text" id="currentLang">EN</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="language-option" data-lang="en">
+                            <span class="flag">🇺🇸</span>
+                            <span>English</span>
+                        </button>
+                        <button class="language-option" data-lang="es">
+                            <span class="flag">🇪🇸</span>
+                            <span>Español</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M10 3V1M10 19V17M17 10H19M1 10H3M15.657 4.343L17.071 2.929M2.929 17.071L4.343 15.657M15.657 15.657L17.071 17.071M2.929 2.929L4.343 4.343"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="project-header">
+                <span class="project-label" data-i18n="hero.label">Commercial SaaS Platform</span>
+                <h1 class="project-title" data-i18n="hero.title">SouthernPOS</h1>
+                <p class="project-subtitle" data-i18n="hero.subtitle">Cloud-Based Point of Sale for Modern Businesses</p>
+                <p class="project-tagline" data-i18n="hero.tagline">
+                    A modular, multi-tenant POS system built with Django and PostgreSQL, designed for
+                    restaurants and retail stores seeking real-time control over sales, inventory, and financial data.
+                </p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon status-dev">●</span>
+                        <span class="meta-value" data-i18n="hero.status">MVP+ Stage - Active Development</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span class="meta-value" data-i18n="hero.commercial">Commercial Product</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span class="meta-value" data-i18n="hero.timeline">Early 2024 - Present</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://southernpos.onrender.com/" target="_blank" rel="noopener"
+                        class="btn btn-primary btn-large">
+                        <span data-i18n="hero.demo">Try Live Demo</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M15 5L5 15M15 5H8M15 5V12" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#architecture" class="btn btn-secondary btn-large" data-i18n="hero.architecture">View Architecture</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase -->
+    <section class="project-showcase-interactive">
+        <div class="container">
+            <div class="showcase-browser">
+                <div class="browser-header">
+                    <div class="browser-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="browser-url">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        <span>southernpos.onrender.com</span>
+                    </div>
+                </div>
+                <div class="browser-content">
+                    <img src="../static/images/southernpos.png" alt="SouthernPOS Interface"
+                        onerror="this.parentElement.classList.add('no-image')">
+                    <div class="showcase-overlay">
+                        <a href="https://southernpos.onrender.com/" target="_blank" rel="noopener" class="overlay-cta">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.9" />
+                                <path d="M20 16L30 24L20 32V16Z" fill="white" />
+                            </svg>
+                            <span>Try Live System</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-features">
+                <div class="feature-highlight">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="6" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M4 12H28" stroke="currentColor" stroke-width="2" />
+                            <circle cx="10" cy="18" r="2" fill="currentColor" />
+                            <circle cx="16" cy="18" r="2" fill="currentColor" />
+                            <circle cx="22" cy="18" r="2" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4 data-i18n="showcase.dualmode">Dual-Mode Operation</h4>
+                        <p data-i18n="showcase.dualmode.desc">Restaurant and Retail interfaces optimized for different workflows</p>
+                    </div>
+                </div>
+                <div class="feature-highlight">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L4 10L16 16L28 10L16 4Z" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M4 16L16 22L28 16" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M4 22L16 28L28 22" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4 data-i18n="showcase.multitenant">Multi-Tenant Architecture</h4>
+                        <p data-i18n="showcase.multitenant.desc">Complete data isolation per business with per-tenant configuration</p>
+                    </div>
+                </div>
+                <div class="feature-highlight">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="4" width="20" height="24" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 10H20M12 16H20M12 22H16" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <h4 data-i18n="showcase.tax">Tax Compliance</h4>
+                        <p data-i18n="showcase.tax.desc">SRI export and invoice generation for Ecuadorian regulations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Business Problem -->
+    <section class="project-section">
+        <div class="container">
+            <div class="section-content">
+                <h2 data-i18n="problem.title">The Business Problem</h2>
+                <p class="lead" data-i18n="problem.intro">
+                    Small businesses face significant barriers when adopting point-of-sale technology:
+                </p>
+                <ul class="problem-list">
+                    <li data-i18n="problem.1">Traditional POS systems require expensive upfront hardware investment</li>
+                    <li data-i18n="problem.2">Lack of mobility prevents owners from monitoring their business remotely</li>
+                    <li data-i18n="problem.3">Fragmented systems for sales, inventory, and accounting create data silos</li>
+                    <li data-i18n="problem.4">Poor inventory management leads to stockouts and overstock</li>
+                    <li data-i18n="problem.5">Complex tax compliance (SRI in Ecuador) requires manual processes</li>
+                </ul>
+                <p data-i18n="problem.solution">
+                    SouthernPOS eliminates these barriers with a cloud-based, all-in-one solution accessible
+                    from any device with a monthly subscription model.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Vision -->
+    <section class="project-section bg-secondary">
+        <div class="container">
+            <div class="section-content">
+                <h2 data-i18n="vision.title">Product Vision</h2>
+                <p class="lead" data-i18n="vision.p1">
+                    SouthernPOS was designed as a modular, scalable SaaS platform with multi-tenant isolation,
+                    financial traceability, and extensibility for future integrations such as electronic
+                    invoicing and payment gateways.
+                </p>
+                <p data-i18n="vision.p2">
+                    The system is built with production architecture from day one, considering data integrity,
+                    security, and scalability constraints that commercial software requires.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Tenant Architecture Section -->
+    <section class="project-section">
+        <div class="container">
+            <h2 data-i18n="multitenant.title">Multi-Tenant System Design</h2>
+            <p class="section-intro" data-i18n="multitenant.intro">
+                SouthernPOS implements true multi-tenancy with logical data isolation, allowing multiple businesses
+                to operate independently on the same infrastructure while maintaining complete data separation and
+                security.
+            </p>
+
+            <div class="architecture-grid">
+                <div class="architecture-item">
+                    <h3 data-i18n="multitenant.isolation">Data Isolation</h3>
+                    <p data-i18n="multitenant.isolation.desc">Every record is automatically filtered by <code>usuario_creador</code>, ensuring businesses only
+                        access their own data. No shared tables, no cross-contamination.</p>
+                </div>
+
+                <div class="architecture-item">
+                    <h3 data-i18n="multitenant.invoices">Sequential Invoice IDs</h3>
+                    <p data-i18n="multitenant.invoices.desc">Each tenant maintains independent invoice numbering sequences, critical for tax compliance and
+                        financial auditing.</p>
+                </div>
+
+                <div class="architecture-item">
+                    <h3 data-i18n="multitenant.config">Per-Tenant Configuration</h3>
+                    <p data-i18n="multitenant.config.desc">Business-specific settings including branding, tax rates, invoice formats, and operational modes
+                        (Restaurant/Retail).</p>
+                </div>
+
+                <div class="architecture-item">
+                    <h3 data-i18n="multitenant.filtering">Automatic Filtering</h3>
+                    <p data-i18n="multitenant.filtering.desc">Django ORM-level filtering ensures data isolation is enforced at the query level, not just the
+                        application layer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Integrity Section -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 data-i18n="financial.title">Financial Consistency & Traceability</h2>
+            <p class="section-intro" data-i18n="financial.intro">
+                Handling real money requires architectural decisions that prioritize data integrity,
+                auditability, and compliance with tax regulations.
+            </p>
+
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 data-i18n="financial.immutability">Transaction Immutability</h3>
+                        <p data-i18n="financial.immutability.desc">Once a sale is completed, transaction records cannot be modified—only voided with full audit
+                            trail.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 data-i18n="financial.stock">Automatic Stock Updates</h3>
+                        <p data-i18n="financial.stock.desc">Inventory adjustments are atomic with transaction completion, preventing stock
+                            inconsistencies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 data-i18n="financial.vat">VAT Calculation</h3>
+                        <p data-i18n="financial.vat.desc">IVA (Ecuador's VAT) is calculated per business configuration, with proper tax breakdown in
+                            invoices.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 data-i18n="financial.sri">SRI Export Compliance</h3>
+                        <p data-i18n="financial.sri.desc">XML export structure aligned with Ecuadorian tax authority (SRI) requirements for electronic
+                            invoicing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Layers -->
+    <section class="project-section">
+        <div class="container">
+            <h2 data-i18n="arch.title">System Architecture</h2>
+            <p class="section-intro" data-i18n="arch.intro">
+                SouthernPOS is built with a layered architecture that separates concerns and enables
+                independent scaling of different system components.
+            </p>
+
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h3 data-i18n="arch.presentation">Presentation Layer</h3>
+                    <p>Django Templates • Bootstrap 5 • JavaScript • Responsive UI</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3 data-i18n="arch.business">Business Logic Layer</h3>
+                    <p>8 Modular Django Apps • Multi-Tenant Logic • Business Rules</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3 data-i18n="arch.financial">Financial Engine</h3>
+                    <p>Transaction Processing • Invoice Generation • Tax Calculation</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3 data-i18n="arch.data">Data Layer</h3>
+                    <p>PostgreSQL (Neon) • Django ORM • Data Isolation</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3 data-i18n="arch.external">External Services</h3>
+                    <p>Cloudinary (Media) • Render (Hosting) • WhiteNoise (Static Files)</p>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h3 data-i18n="arch.tech">Core Technologies</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">Django 5.x</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">Cloudinary</span>
+                    <span class="tech-badge">ReportLab</span>
+                    <span class="tech-badge">Neon DB</span>
+                    <span class="tech-badge">Render</span>
+                    <span class="tech-badge">WhiteNoise</span>
+                    <span class="tech-badge">Bootstrap 5</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 data-i18n="security.title">Security & Production Configuration</h2>
+            <p class="section-intro" data-i18n="security.intro">
+                Production-grade security measures implemented from day one, not as an afterthought.
+            </p>
+
+            <div class="security-grid">
+                <div class="security-item">
+                    <h4 data-i18n="security.csrf">CSRF Protection</h4>
+                    <p data-i18n="security.csrf.desc">Django's built-in CSRF middleware enabled on all state-changing operations.</p>
+                </div>
+                <div class="security-item">
+                    <h4 data-i18n="security.https">HTTPS Enforcement</h4>
+                    <p data-i18n="security.https.desc">Secure connections enforced in production with HSTS headers.</p>
+                </div>
+                <div class="security-item">
+                    <h4 data-i18n="security.cookies">Secure Cookies</h4>
+                    <p data-i18n="security.cookies.desc">Session cookies marked as secure and httponly to prevent XSS attacks.</p>
+                </div>
+                <div class="security-item">
+                    <h4 data-i18n="security.env">Environment Secrets</h4>
+                    <p data-i18n="security.env.desc">All sensitive credentials stored in environment variables, never in code.</p>
+                </div>
+                <div class="security-item">
+                    <h4 data-i18n="security.xframe">X-Frame-Options</h4>
+                    <p data-i18n="security.xframe.desc">Clickjacking protection enabled to prevent iframe embedding attacks.</p>
+                </div>
+                <div class="security-item">
+                    <h4 data-i18n="security.content">Content-Type Sniffing</h4>
+                    <p data-i18n="security.content.desc">X-Content-Type-Options header prevents MIME type confusion attacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Decisions -->
+    <section class="project-section">
+        <div class="container">
+            <h2 data-i18n="decisions.title">Engineering Decisions</h2>
+            <p class="section-intro" data-i18n="decisions.intro">
+                Every technology choice was made with specific trade-offs in mind. Here's the reasoning behind key
+                decisions.
+            </p>
+
+            <div class="decisions-list">
+                <div class="decision-item">
+                    <h3 data-i18n="decisions.postgres">Why PostgreSQL instead of SQLite?</h3>
+                    <p data-i18n="decisions.postgres.desc">Multi-tenant systems require robust concurrent access, complex queries, and production-grade
+                        reliability. PostgreSQL provides ACID compliance, better indexing, and horizontal scaling
+                        potential.
+                    </p>
+                </div>
+
+                <div class="decision-item">
+                    <h3 data-i18n="decisions.cloudinary">Why Cloudinary for media persistence?</h3>
+                    <p data-i18n="decisions.cloudinary.desc">Free-tier hosting on Render doesn't guarantee file persistence across deployments. Cloudinary
+                        provides reliable CDN-backed storage for product images and business logos.</p>
+                </div>
+
+                <div class="decision-item">
+                    <h3 data-i18n="decisions.reportlab">Why ReportLab for invoice generation?</h3>
+                    <p data-i18n="decisions.reportlab.desc">Thermal printer compatibility (80mm format) and precise PDF control for tax-compliant invoices.
+                        HTML-to-PDF solutions lack the precision needed for receipt formatting.</p>
+                </div>
+
+                <div class="decision-item">
+                    <h3 data-i18n="decisions.neon">Why Neon DB for cloud database?</h3>
+                    <p data-i18n="decisions.neon.desc">Serverless PostgreSQL with automatic scaling and generous free tier. Separates database from
+                        application hosting, enabling independent scaling.</p>
+                </div>
+
+                <div class="decision-item">
+                    <h3 data-i18n="decisions.render">Why Render for MVP stage?</h3>
+                    <p data-i18n="decisions.render.desc">Zero-cost hosting for MVP validation with easy migration path to paid tiers. Automatic
+                        deployments
+                        from Git and built-in SSL certificates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Limitations -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 data-i18n="limits.title">Current Limitations & Trade-offs</h2>
+            <p class="section-intro" data-i18n="limits.intro">
+                Honest assessment of current constraints and architectural decisions that prioritize
+                speed-to-market over premature optimization.
+            </p>
+
+            <div class="limitations-grid">
+                <div class="limitation-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span data-i18n="limits.coldstart">Cold Start Latency</span>
+                    </h4>
+                    <p data-i18n="limits.coldstart.desc">Free-tier hosting causes 30-60 second cold starts after inactivity. Acceptable for MVP, will
+                        require
+                        paid tier for production.</p>
+                </div>
+
+                <div class="limitation-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                        <span data-i18n="limits.scaling">No Horizontal Scaling</span>
+                    </h4>
+                    <p data-i18n="limits.scaling.desc">Current architecture is single-instance. Database is ready for scaling, but application layer
+                        needs
+                        load balancer configuration.</p>
+                </div>
+
+                <div class="limitation-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <span data-i18n="limits.roles">Basic Role Management</span>
+                    </h4>
+                    <p data-i18n="limits.roles.desc">User permissions are functional but not granular. Full RBAC (Role-Based Access Control) system is
+                        in
+                        roadmap.</p>
+                </div>
+
+                <div class="limitation-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span data-i18n="limits.sri">SRI Certification Pending</span>
+                    </h4>
+                    <p data-i18n="limits.sri.desc">Electronic invoicing structure is ready, but official SRI certification process is pending for
+                        legal
+                        compliance.</p>
+                </div>
+            </div>
+
+            <p class="limitation-note" data-i18n="limits.note">
+                These limitations are documented and prioritized in the development roadmap.
+                They represent conscious trade-offs between speed-to-market and feature completeness.
+            </p>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="project-section">
+        <div class="container">
+            <h2 data-i18n="roadmap.title">Development Roadmap</h2>
+
+            <div class="roadmap-container">
+                <div class="roadmap-column">
+                    <h3 class="roadmap-status implemented">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span data-i18n="roadmap.implemented">Implemented</span>
+                    </h3>
+                    <ul class="roadmap-list">
+                        <li data-i18n="roadmap.impl.1">Multi-tenant architecture with data isolation</li>
+                        <li data-i18n="roadmap.impl.2">Dual-mode operation (Restaurant/Retail)</li>
+                        <li data-i18n="roadmap.impl.3">Product catalog with image management</li>
+                        <li data-i18n="roadmap.impl.4">Real-time inventory tracking</li>
+                        <li data-i18n="roadmap.impl.5">Sales transaction processing</li>
+                        <li data-i18n="roadmap.impl.6">PDF invoice generation (80mm thermal)</li>
+                        <li data-i18n="roadmap.impl.7">Customer management system</li>
+                        <li data-i18n="roadmap.impl.8">Sales analytics and reporting</li>
+                        <li data-i18n="roadmap.impl.9">User configuration and branding</li>
+                        <li data-i18n="roadmap.impl.10">SRI XML export structure</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-column">
+                    <h3 class="roadmap-status in-progress">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                        <span data-i18n="roadmap.progress">In Progress</span>
+                    </h3>
+                    <ul class="roadmap-list">
+                        <li data-i18n="roadmap.prog.1">Retail mode refinement (bug fixes)</li>
+                        <li data-i18n="roadmap.prog.2">Electronic invoicing (SRI certification)</li>
+                        <li data-i18n="roadmap.prog.3">Advanced analytics dashboard</li>
+                        <li data-i18n="roadmap.prog.4">Mobile-responsive improvements</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-column">
+                    <h3 class="roadmap-status planned">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                        <span data-i18n="roadmap.planned">Planned</span>
+                    </h3>
+                    <ul class="roadmap-list">
+                        <li data-i18n="roadmap.plan.1">Payment gateway integration</li>
+                        <li data-i18n="roadmap.plan.2">Multi-branch support</li>
+                        <li data-i18n="roadmap.plan.3">Offline mode (PWA)</li>
+                        <li data-i18n="roadmap.plan.4">Granular role-based permissions</li>
+                        <li data-i18n="roadmap.plan.5">API for third-party integrations</li>
+                        <li data-i18n="roadmap.plan.6">Automated backup system</li>
+                        <li data-i18n="roadmap.plan.7">Advanced inventory forecasting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why I Built This -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 data-i18n="why.title">Why I Built This</h2>
+            <div class="why-content">
+                <p data-i18n="why.p1">
+                    SouthernPOS was started as an attempt to design a commercially viable SaaS product
+                    with real financial responsibility. Unlike academic systems, this project required
+                    thinking about tax compliance, invoice traceability, multi-tenant isolation, and
+                    scalability constraints from day one.
+                </p>
+                <p data-i18n="why.p2">
+                    The goal wasn't just to build a POS system—it was to understand what it takes to
+                    create production-grade software that handles real money, serves real businesses,
+                    and complies with real regulations. Every architectural decision was made with
+                    commercial viability in mind, not just technical elegance.
+                </p>
+                <p data-i18n="why.p3">
+                    This project taught me that building commercial software is fundamentally different
+                    from building academic projects. It's not about using the latest framework or the
+                    most complex architecture—it's about making pragmatic decisions that balance
+                    technical debt, time-to-market, and long-term maintainability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="project-cta">
+        <h2 data-i18n="cta.title">Explore SouthernPOS</h2>
+        <p data-i18n="cta.subtitle">Experience the platform in action or review the technical implementation.</p>
+        <div class="cta-buttons">
+            <a href="https://southernpos.onrender.com/" target="_blank" class="btn btn-primary" data-i18n="cta.demo">View Live Demo</a>
+            <a href="../index.html#projects" class="btn btn-secondary" data-i18n="cta.back">Back to Projects</a>
+        </div>
+        <p class="cta-note" data-i18n="cta.note">
+            Note: Demo is hosted on free tier and may take 30-60 seconds to wake up from cold start.
+        </p>
+    </section>
+
+    <!-- Next Project -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <div class="next-project">
+                <span class="next-label" data-i18n="next.title">Next Project</span>
+                <h2 data-i18n="next.plugsite">Plugsite</h2>
+                <p data-i18n="next.plugsite.desc">Multi-tenant SaaS platform for Minecraft server stores with PayPal integration and vendor withdrawal
+                    system.</p>
+                <a href="plugsite.html" class="btn btn-primary" data-i18n="next.view">View Project</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer.copyright">&copy; 2026 Justin Ocaña. Building scalable SaaS platforms.</p>
+        </div>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/southernpos-translations.js"></script>
+</body>
+
+</html>

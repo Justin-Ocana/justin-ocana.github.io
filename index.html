@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Justin Ocaña - 16-year-old Backend Developer focused on system architecture, Python and Django">
+    <title>Justin Ocaña - Backend Developer</title>
+    <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/project-colors.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2.5" />
+                    <path d="M12 16L16 20L20 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 12V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#sobre-mi" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#proyectos" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="language-selector">
+                    <button class="language-toggle" id="languageToggle" aria-label="Change language">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M2 10H18M10 2C11.5 4 12 7 12 10C12 13 11.5 16 10 18M10 2C8.5 4 8 7 8 10C8 13 8.5 16 10 18"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span class="language-text" id="currentLang">EN</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="language-option" data-lang="en">
+                            <span class="flag">🇺🇸</span>
+                            <span>English</span>
+                        </button>
+                        <button class="language-option" data-lang="es">
+                            <span class="flag">🇪🇸</span>
+                            <span>Español</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M10 3V1M10 19V17M17 10H19M1 10H3M15.657 4.343L17.071 2.929M2.929 17.071L4.343 15.657M15.657 15.657L17.071 17.071M2.929 2.929L4.343 4.343"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                            stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <circle cx="4" cy="4" r="4" fill="currentColor" />
+                    </svg>
+                    <span data-i18n="hero.available">Available for opportunities</span>
+                </div>
+                <h1 class="hero-title" data-i18n="hero.title">
+                    Solving real problems<br />
+                    I design systems<br />
+                    before I write code
+                </h1>
+                <p class="hero-description" data-i18n="hero.description">
+                    16-year-old Backend Developer from Ecuador focused on logic, architecture and
+                    real-world systems. I build structured solutions with Python, Django and modern
+                    tools.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">2+</div>
+                        <div class="stat-label" data-i18n="hero.yearsLearning">Years Learning</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">4+</div>
+                        <div class="stat-label" data-i18n="hero.realSystems">Real Systems</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">Backend</div>
+                        <div class="stat-label" data-i18n="hero.architectureFocus">Architecture Focus</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">
+                        <span data-i18n="hero.viewWork">View Work</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary" data-i18n="hero.getInTouch">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="window-title">main.py</div>
+                    </div>
+                    <div class="window-content">
+                        <pre><code><span class="code-keyword">class</span> <span class="code-class">Justin</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.age = <span class="code-number">16</span>
+        <span class="code-param">self</span>.location = <span class="code-string">"Milagro, Ecuador"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"Backend Developer"</span>
+        <span class="code-param">self</span>.focus = <span class="code-string">"System Architecture"</span>
+        <span class="code-param">self</span>.tools = [
+            <span class="code-string">"Python"</span>,
+            <span class="code-string">"Django"</span>,
+            <span class="code-string">"PostgreSQL"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-function">philosophy</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Design first. Code second."</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="about.label">About</span>
+                <h2 class="section-title" data-i18n="about.title">Background & Approach</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-main">
+                    <p class="about-intro" data-i18n="about.intro">
+                        I approach software as a system, not just code.
+                    </p>
+                    <p data-i18n="about.p1">
+                        At 16, based in Milagro, Ecuador, I've spent the last two years building
+                        structured backend systems using Python and Django. I focus on designing
+                        database models, defining business logic, and structuring permissions
+                        before writing implementation code.
+                    </p>
+                    <p data-i18n="about.p2">
+                        I use AI as a productivity assistant—not as a replacement for thinking.
+                        I define the architecture, the constraints, and the decisions behind
+                        every system I build.
+                    </p>
+                    <p data-i18n="about.p3">
+                        I'm constantly refining my skills, improving code quality, and learning
+                        how to build scalable and maintainable applications.
+                    </p>
+                    <p data-i18n="about.p4">
+                        For me, every project is a design challenge: Understand the problem →
+                        Model the system → Build with purpose.
+                    </p>
+                </div>
+
+                <div class="about-principles">
+                    <h3 data-i18n="about.principles">Core Principles</h3>
+                    <ul class="principles-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span data-i18n="about.principle1">Design before implementation</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span data-i18n="about.principle2">Structure logic clearly</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span data-i18n="about.principle3">Keep systems maintainable</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span data-i18n="about.principle4">Use AI strategically, not blindly</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span data-i18n="about.principle5">Build solutions that scale</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <div class="container">
+                    <h3 data-i18n="tech.title">Technical Stack</h3>
+                    <div class="stack-grid">
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M16 4L4 10L16 16L28 10L16 4Z" stroke="currentColor" stroke-width="2"
+                                        stroke-linejoin="round" />
+                                    <path d="M4 16L16 22L28 16" stroke="currentColor" stroke-width="2"
+                                        stroke-linejoin="round" />
+                                    <path d="M4 22L16 28L28 22" stroke="currentColor" stroke-width="2"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="stack-info">
+                                <h4 data-i18n="tech.backend">Backend Development</h4>
+                                <p data-i18n="tech.backend.desc">Python, Django, Django REST Framework</p>
+                            </div>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <rect x="4" y="4" width="24" height="24" rx="2" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M4 12H28M12 4V28" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="stack-info">
+                                <h4 data-i18n="tech.databases">Database Design</h4>
+                                <p data-i18n="tech.databases.desc">PostgreSQL, Relational Modeling, Query Optimization
+                                </p>
+                            </div>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M8 8H24M8 16H24M8 24H16" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="stack-info">
+                                <h4 data-i18n="tech.concepts">System Concepts</h4>
+                                <p data-i18n="tech.concepts.desc">Authentication & Authorization, CRUD Architecture,
+                                    REST APIs, MVC Pattern</p>
+                            </div>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2" />
+                                    <path d="M16 8V16L22 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="stack-info">
+                                <h4 data-i18n="tech.tools">Tools</h4>
+                                <p data-i18n="tech.tools.desc">Git, Linux, Docker, VS Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="projects.label">Product Engineering Experience</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Independent SaaS Systems • 2024 – Present</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Proyecto 1 - Agenda Virtual EIWA -->
+                <article class="project-card eiwa-card">
+                    <div class="project-image">
+                        <img src="static/images/agenda_virtual.png" alt="Agenda Virtual EIWA"
+                            onerror="this.parentElement.classList.add('no-image')">
+                        <div class="project-overlay">
+                            <span class="project-status status-completed"
+                                data-i18n="projects.status.completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.agenda.title">Agenda Virtual EIWA</h3>
+                        <p class="project-meta" data-i18n="projects.agenda.meta">Production • Active Users</p>
+                        <p class="project-description" data-i18n="projects.agenda.desc">
+                            Digital version of EIWA's physical agenda with real-time collaboration and smart
+                            notifications.
+                        </p>
+                        <ul class="project-highlights" data-i18n-group="projects.agenda.highlights">
+                            <li>Modular Django architecture (8 apps)</li>
+                            <li>Hierarchical role-based permissions</li>
+                            <li>PostgreSQL relational optimization</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <a href="pages/agenda-virtual.html" class="project-link">
+                            <span data-i18n="projects.viewProject">View Project</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 - SouthernPOS -->
+                <article class="project-card southernpos-card">
+                    <div class="project-image">
+                        <img src="static/images/southernpos.png" alt="SouthernPOS"
+                            onerror="this.parentElement.classList.add('no-image')">
+                        <div class="project-overlay">
+                            <span class="project-status status-progress" data-i18n="projects.status.progress">In
+                                Development</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.southernpos.title">SouthernPOS</h3>
+                        <p class="project-meta" data-i18n="projects.southernpos.meta">MVP+ Stage • Financial System</p>
+                        <p class="project-description" data-i18n="projects.southernpos.desc">
+                            Cloud-based POS system with multi-tenant architecture for restaurants and retail
+                            businesses.
+                        </p>
+                        <ul class="project-highlights" data-i18n-group="projects.southernpos.highlights">
+                            <li>Multi-tenant schema isolation</li>
+                            <li>Real-time inventory management</li>
+                            <li>Payment gateway integration</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Multi-Tenant</span>
+                        </div>
+                        <a href="pages/southernpos.html" class="project-link">
+                            <span data-i18n="projects.viewProject">View Project</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 - Plugsite -->
+                <article class="project-card plugsite-card">
+                    <div class="project-image">
+                        <img src="static/images/plugsite.png" alt="Plugsite"
+                            onerror="this.parentElement.classList.add('no-image')">
+                        <div class="project-overlay">
+                            <span class="project-status status-progress">87% Complete</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.plugsite.title">Plugsite</h3>
+                        <p class="project-meta" data-i18n="projects.plugsite.meta">87% Complete • Multi-Tenant SaaS</p>
+                        <p class="project-description" data-i18n="projects.plugsite.desc">
+                            Multi-tenant SaaS platform for Minecraft server stores with PayPal integration and
+                            withdrawal system.
+                        </p>
+                        <ul class="project-highlights" data-i18n-group="projects.plugsite.highlights">
+                            <li>Tenant-isolated MongoDB architecture</li>
+                            <li>PayPal IPN webhook processing</li>
+                            <li>Automated withdrawal system</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">PayPal</span>
+                            <span class="tech-tag">SaaS</span>
+                        </div>
+                        <a href="pages/plugsite.html" class="project-link">
+                            <span data-i18n="projects.viewProject">View Project</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="contact.label">Contact</span>
+                <h2 class="section-title" data-i18n="contact.title">Let's Work Together</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro" data-i18n="contact.intro">
+                        Currently open to internships and exciting projects. If you're building
+                        something that could make a difference, I'd love to be part of it.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:justin.ocana.molina@gmail.com" class="contact-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M18 5l-8 5-8-5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <span>justin.ocana.molina@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/Justin-Ocana" target="_blank" rel="noopener" class="contact-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.165 20 14.418 20 10c0-5.523-4.477-10-10-10z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span>github.com/Justin-Ocana</span>
+                        </a>
+                    </div>
+                    <div class="contact-availability">
+                        <div class="availability-indicator"></div>
+                        <span data-i18n="contact.available">Currently available for new projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Justin Ocaña. Built with logic and purpose.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Justin-Ocana" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:justin.ocana.molina@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/translations.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
