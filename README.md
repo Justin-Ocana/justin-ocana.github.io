@@ -1,189 +1,155 @@
-# 🚀 Portafolio Digital Profesional
+# Justin Ocaña - Backend Developer Portfolio
 
-Portafolio moderno y profesional diseñado para destacar tus proyectos y habilidades como desarrollador.
+[![Live Site](https://img.shields.io/badge/Live-justin--ocana.github.io-0891b2?style=for-the-badge)](https://justin-ocana.github.io/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-5.x-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
-## ✨ Características
+Professional portfolio showcasing production-ready systems built with Django, PostgreSQL, and modern backend architecture.
 
-- **Diseño Moderno**: Interfaz limpia y profesional con animaciones suaves
-- **Modo Claro/Oscuro**: Toggle para cambiar entre temas
-- **Totalmente Responsive**: Optimizado para móviles, tablets y desktop
-- **Navegación Inteligente**: Smooth scroll y menú hamburguesa en móvil
-- **Secciones Completas**:
-  - Hero con presentación impactante
-  - Sobre Mí con enfoque en tu proceso de pensamiento
-  - Proyectos con detalles técnicos profundos
-  - Experiencia con timeline visual
-  - Blog técnico
-  - Formulario de contacto
+## Overview
 
-## 🎨 Paletas de Colores
+This portfolio demonstrates real-world backend development experience through three production systems:
 
-### Modo Claro (Profesional)
-- Fondo: Blanco (#ffffff)
-- Texto: Gris oscuro (#1a1a1a)
-- Acentos: Azul petróleo (#0891b2) + Cyan (#06b6d4)
+### Featured Projects
 
-### Modo Oscuro (Tech Moderno)
-- Fondo: Negro profundo (#0d0d0d)
-- Texto: Blanco (#ffffff)
-- Acentos: Cyan neón (#22d3ee) + Cyan (#06b6d4)
+| Project | Description | Status | Tech Stack |
+|---------|-------------|--------|------------|
+| **[Agenda Virtual EIWA](https://justin-ocana.github.io/pages/agenda-virtual.html)** | Multi-user academic platform with role-based permissions | ✅ Production | Django, PostgreSQL, REST API |
+| **[Plugsite](https://justin-ocana.github.io/pages/plugsite.html)** | Multi-tenant SaaS for Minecraft server stores | 🚧 87% Complete | Django, MongoDB, PayPal |
+| **[SouthernPOS](https://justin-ocana.github.io/pages/southernpos.html)** | Cloud-based point-of-sale system | 🚧 MVP+ Stage | Django, PostgreSQL, ReportLab |
 
-## 📁 Estructura del Proyecto
+## Technical Stack
+
+### Backend
+- Django 5.x
+- Python 3.11+
+- Django REST Framework
+- PostgreSQL / MongoDB
+
+### Frontend
+- Vanilla JavaScript
+- Custom CSS architecture
+- Responsive design
+- Dark/light theme system
+
+### Infrastructure
+- Render.com hosting
+- Neon DB (PostgreSQL)
+- Cloudinary (media storage)
+- WhiteNoise (static files)
+
+## Project Structure
 
 ```
-portafolio/
-├── index.html              # Página principal
-├── pages/                  # Páginas adicionales (blog posts)
+portfolio/
+├── index.html                      # Main landing page
+├── pages/                          # Project detail pages
+│   ├── agenda-virtual.html
+│   ├── plugsite.html
+│   └── southernpos.html
 ├── static/
 │   ├── css/
-│   │   └── styles.css     # Estilos completos
+│   │   ├── styles.css             # Core styles
+│   │   ├── project-page.css       # Project page styles
+│   │   ├── project-colors.css     # Color system
+│   │   ├── plugsite-theme.css     # Project-specific theme
+│   │   └── southernpos-theme.css  # Project-specific theme
 │   ├── js/
-│   │   └── main.js        # JavaScript interactivo
-│   └── images/            # Imágenes del portafolio
-│       ├── profile.jpg    # Tu foto profesional
-│       ├── project1.jpg   # Imagen proyecto 1
-│       ├── project2.jpg   # Imagen proyecto 2
-│       └── project3.jpg   # Imagen proyecto 3
-└── README.md              # Este archivo
+│   │   ├── main.js                # Core functionality
+│   │   ├── translations.js        # i18n system
+│   │   ├── project-page.js        # Project page logic
+│   │   └── *-translations.js      # Project translations
+│   └── images/
+│       ├── favicon.svg
+│       └── *.png                  # Project screenshots
+└── README.md
 ```
 
-## 🛠️ Personalización
+## Features
 
-### 1. Información Personal
+### Core Functionality
+- Bilingual support (English/Spanish)
+- Theme persistence (localStorage)
+- Responsive navigation
+- Smooth scroll behavior
+- Project filtering
 
-Edita `index.html` y reemplaza:
-- `[Tu Nombre]` - Tu nombre completo
-- `[Tu edad]` - Tu edad
-- `[Tu ciudad]` - Tu ubicación
-- `TU_LOGO` - Tu logo o iniciales
-- Enlaces de redes sociales (LinkedIn, GitHub, Telegram)
-- Email de contacto
+### Architecture Documentation
+Each project page includes:
+- Problem statement and business context
+- Technical architecture overview
+- System design decisions
+- Technology trade-offs
+- Current limitations
 
-### 2. Proyectos
-
-Para cada proyecto, completa:
-- Título y descripción
-- Estado (Completado / En Desarrollo)
-- Problema que resuelve
-- Stack tecnológico
-- Tu rol específico
-- Código destacado
-- Aprendizajes clave
-- Enlaces a demo y GitHub
-
-### 3. Imágenes
-
-Agrega tus imágenes en `static/images/`:
-- `profile.jpg` - Foto profesional (recomendado: 400x400px)
-- `project1.jpg`, `project2.jpg`, etc. - Screenshots de proyectos (recomendado: 1200x600px)
-
-### 4. Colores (Opcional)
-
-Si quieres cambiar la paleta de colores, edita las variables CSS en `static/css/styles.css`:
-
-```css
-:root {
-    --accent-primary: #TU_COLOR;
-    --accent-secondary: #TU_COLOR_SECUNDARIO;
-}
-```
-
-### 5. Blog Posts
-
-Crea archivos HTML en la carpeta `pages/` para tus posts:
-- `blog-post-1.html`
-- `blog-post-2.html`
-- etc.
-
-## 🚀 Cómo Usar
-
-### Desarrollo Local
-
-1. Abre `index.html` directamente en tu navegador
-2. O usa un servidor local:
+## Local Development
 
 ```bash
-# Con Python
+# Clone repository
+git clone https://github.com/justin-ocana/justin-ocana.github.io.git
+cd justin-ocana.github.io
+
+# Serve locally
 python -m http.server 8000
 
-# Con Node.js (http-server)
-npx http-server
-
-# Con PHP
-php -S localhost:8000
+# Visit
+http://localhost:8000
 ```
 
-3. Visita `http://localhost:8000`
+## Deployment
 
-### Despliegue
+Optimized for static hosting platforms:
+- GitHub Pages
+- Netlify
+- Vercel
+- Render
 
-Puedes desplegar tu portafolio en:
+## Design System
 
-- **GitHub Pages**: Gratis y fácil
-  1. Sube tu código a un repositorio
-  2. Ve a Settings > Pages
-  3. Selecciona la rama main
-  4. Tu sitio estará en `https://tu-usuario.github.io/repositorio`
+### Color Palette
+- Primary accent: #0891b2 (cyan-600)
+- Secondary accent: #06b6d4 (cyan-500)
+- Neutral scale: #0d0d0d to #ffffff
 
-- **Netlify**: Drag & drop
-  1. Arrastra la carpeta a netlify.com/drop
-  2. Listo
+### Typography
+- Primary: Inter (sans-serif)
+- Monospace: JetBrains Mono
 
-- **Vercel**: Integración con Git
-  1. Conecta tu repositorio
-  2. Deploy automático
-
-## 📝 Checklist de Personalización
-
-- [ ] Reemplazar nombre y datos personales
-- [ ] Agregar foto profesional
-- [ ] Completar sección "Sobre Mí"
-- [ ] Agregar al menos 3 proyectos con detalles
-- [ ] Actualizar experiencia y timeline
-- [ ] Escribir 2-3 posts de blog
-- [ ] Configurar enlaces de redes sociales
-- [ ] Agregar CV descargable
-- [ ] Probar en móvil y desktop
-- [ ] Verificar modo claro/oscuro
-- [ ] Optimizar imágenes (comprimir)
-
-## 🎯 Consejos para Destacar
-
-1. **Proyectos**: No solo muestres qué hiciste, explica POR QUÉ tomaste cada decisión técnica
-2. **Código**: Incluye snippets que demuestren tu lógica y pensamiento
-3. **Aprendizajes**: Sé honesto sobre lo que aprendiste y los desafíos
-4. **Blog**: Escribe sobre decisiones técnicas, no tutoriales genéricos
-5. **Autenticidad**: Tu enfoque con IA es una fortaleza, no lo ocultes
-
-## 🔧 Funcionalidades JavaScript
-
-- Cambio de tema (localStorage)
-- Navegación móvil responsive
-- Smooth scroll
-- Animaciones de entrada
-- Highlight de sección activa
-- Lazy loading de imágenes
-- Validación de formulario
-
-## 📱 Responsive Breakpoints
-
-- Desktop: > 968px
-- Tablet: 640px - 968px
+### Responsive Breakpoints
 - Mobile: < 640px
+- Tablet: 640px - 968px
+- Desktop: > 968px
 
-## 🌐 Navegadores Soportados
+## Browser Support
 
-- Chrome/Edge (últimas 2 versiones)
-- Firefox (últimas 2 versiones)
-- Safari (últimas 2 versiones)
-- Opera (últimas 2 versiones)
+- Chrome/Edge 90+
+- Firefox 88+
+- Safari 14+
+- Opera 76+
 
-## 📄 Licencia
+## Screenshots
 
-Este portafolio es tuyo. Úsalo, modifícalo y hazlo brillar.
+### Agenda Virtual EIWA
+![Agenda Virtual EIWA](static/images/agenda_virtual.png)
+
+### Plugsite
+![Plugsite Platform](static/images/plugsite.png)
+
+### SouthernPOS
+![SouthernPOS System](static/images/southernpos.png)
+
+## Contact
+
+- **Email**: justin.ocana.molina@gmail.com
+- **GitHub**: [@justin-ocana](https://github.com/justin-ocana)
+- **Portfolio**: [justin-ocana.github.io](https://justin-ocana.github.io/)
+- **Location**: Milagro, Ecuador
+
+## License
+
+MIT License - Free to use and modify.
 
 ---
 
-**¿Necesitas ayuda?** Revisa el código, está comentado para que entiendas cada parte.
-
-**¡Éxito con tu portafolio!** 🚀
+Built with focus on system architecture and real-world problem solving.
